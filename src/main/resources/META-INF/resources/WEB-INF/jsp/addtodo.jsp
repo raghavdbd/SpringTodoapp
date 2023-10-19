@@ -14,6 +14,7 @@
         <form:form action="" method="post" modelAttribute="todo" >
             Description : <form:input type="text" path="description" id="" />
             <form:input type="hidden" path="id" id="" />
+            <form:input type="hidden" path="done" id="" />
             <input type="submit" name="Add" id="" class="btn btn-success" />
         </form:form>
 

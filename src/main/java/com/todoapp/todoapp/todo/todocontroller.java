@@ -62,5 +62,26 @@ todoservice.addtodo("Raghav", todo.getDescription(), LocalDate.now().plusYears(1
 
      }
      
+      @RequestMapping(value =  "update-todo",method = RequestMethod.GET)
+     public String ShowUpdatetodopage(@RequestParam int id,ModelMap model){
+    //     we need to map Todo
+    Todo todo=todoservice.findByid(id);
+    model.addAttribute("todo",todo);
+
+         return "addtodo";
+
+
+     }
+
+      @RequestMapping(value = "update-todo",method=RequestMethod.POST)
+     public String   Updatetodo(@RequestParam int id,ModelMap model,Todo todo){
+    //     we need to map Todo
+    todoservice.updatetodo(todo);
+
+         return "redirect:todo";
+
+
+     }
+     
     
 }
