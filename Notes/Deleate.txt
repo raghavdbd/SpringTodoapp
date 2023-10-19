@@ -1,0 +1,11 @@
+for deleating a todo we are using id for that we are passing add in herf like this
+<td><a href="delete-todo?id=${todo.id}" class="btn btn-warning">Delete${todo.id}</a></td>
+
+after that i have create a todo controller which will capture the id with the help of Request RequestParams
+
+
+  Predicate<? super Todo>predicate = todo -> todo.getId() ==id ;
+
+  Predicate<? super Todo>: This part is declaring the type of the variable predicate. It's a Predicate that operates on objects of type Todo. The ? super Todo is a wildcard that allows you to use the Predicate on any superclass of Todo as well.
+
+  

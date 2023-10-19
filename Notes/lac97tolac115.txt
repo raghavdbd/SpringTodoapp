@@ -1,0 +1,37 @@
+Expression langusage this is used to display data store in model
+
+to display data more efectity we use JStl
+for this we have to add some dependency
+---------------- dependency-----------------------------------------------------
+<dependency>
+		      <groupId>jakarta.servlet.jsp.jstl</groupId>
+		      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.jetty</groupId>
+			<artifactId>glassfish-jstl</artifactId>
+
+		</dependency>
+-------------------------------------------------------------------------------------------
+JSTL core library
+if we want to use for it stataement in jsp then we have use this library
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+@RequestParams is to capture form Details
+
+
+Command Bean or Form Backing Object
+
+currently what er are doing we are using@ Requestparams to caputure form data but this cause lot 
+of issue as we have to write a lot of code so to avoid that problem what we can do we 
+use a command beam or form backing Object in this we bind the form with java class
+using form tag library
+
+Bindingresult result if result have soe error than not 
+@valid annotation is used to validate the bean before the binding occur
+
+
+
+
